@@ -384,8 +384,15 @@ public class CustomerDaoImpl implements CustomerDao {
             public DCustomer mapRow(ResultSet rs, int paramInt) throws SQLException {
                 final DCustomer domain = new DCustomer();
                 domain.setId(rs.getLong("id"));
-                domain.setName(rs.getString("firstName"));
-                domain.setCreatedDate(new Date(rs.getTimestamp("dob").getTime()));
+                //domain.setName(rs.getString("name"));
+                //domain.setCreatedDate(new Date(rs.getTimestamp("createdDate").getTime()));
+                domain.setFirstName(rs.getString("firstName"));
+                domain.setLastName(rs.getString("lastName"));
+                domain.setGender(rs.getString("gender"));
+                domain.setEmail(rs.getString("email"));
+                domain.setPhone(rs.getString("phone"));
+                domain.setAddress(rs.getString("address"));
+                domain.setDob(new Date(rs.getDate("dob").getTime()));
                 return domain;
             }
             
@@ -430,9 +437,11 @@ public class CustomerDaoImpl implements CustomerDao {
 
     public DCustomer update(DCustomer dCustomer) {
 
-        final String sql = "UPDATE customer set firstName =? where id=?";
-        int result = jdbcTemplate.update(sql, new Object[] { dCustomer.getFirstName() , dCustomer.getId()});
+        final String sql = "UPDATE customers set firstName =? , lastName =? , gender =? , email =? , phone =? , address =? , dob =? where id=?";
+        int result = jdbcTemplate.update(sql, new Object[] { dCustomer.getFirstName() ,dCustomer.getLastName(),	dCustomer.getGender(), dCustomer.getEmail(), dCustomer.getPhone(),	dCustomer.getAddress(),
+												        		dCustomer.getDob(),	dCustomer.getId()});
         return result == 1 ? dCustomer : null;
+
     }
 }
 
@@ -494,4 +503,7 @@ password=${database.password}
     <database.password></database.password>    
   </properties>
   
+```
+Gitignore not working
+(http://stackoverflow.com/questions/25436312/gitignore-not-working)
 ```
