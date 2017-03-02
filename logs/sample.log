@@ -1693,3 +1693,20 @@
 03-02 08:35:17,382 DEBUG [CustomerServiceImpl]  getPage limit : 10 cursorkey : 10
 03-02 08:35:17,398 DEBUG [CustomerDaoImpl]  total records count : 17 : Integer.parseInt(cursorKey) + items.size() : 17 
 03-02 08:35:17,398 DEBUG [CustomerDaoImpl] next cursorKey null
+03-02 08:40:05,599 INFO  [AnnotationConfigWebApplicationContext] Closing WebApplicationContext for namespace 'spring-dispatcher-servlet': startup date [Thu Mar 02 08:33:19 ICT 2017]; root of context hierarchy
+03-02 08:40:07,305 INFO  [DispatcherServlet] FrameworkServlet 'spring-dispatcher': initialization started
+03-02 08:40:07,326 INFO  [AnnotationConfigWebApplicationContext] Refreshing WebApplicationContext for namespace 'spring-dispatcher-servlet': startup date [Thu Mar 02 08:40:07 ICT 2017]; root of context hierarchy
+03-02 08:40:07,367 INFO  [AnnotationConfigWebApplicationContext] Successfully resolved class for [com.rupp.spring.config.MvcConfig]
+03-02 08:40:07,654 INFO  [AutowiredAnnotationBeanPostProcessor] JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+03-02 08:40:08,058 INFO  [RequestMappingHandlerAdapter] Looking for @ControllerAdvice: WebApplicationContext for namespace 'spring-dispatcher-servlet': startup date [Thu Mar 02 08:40:07 ICT 2017]; root of context hierarchy
+03-02 08:40:08,127 INFO  [RequestMappingHandlerMapping] Mapped "{[/customers/v1/{id}],methods=[PUT]}" onto public org.springframework.http.ResponseEntity com.rupp.spring.controller.CustomerController.updateDCustomer(java.lang.Long,com.rupp.spring.domain.DCustomer)
+03-02 08:40:08,127 INFO  [RequestMappingHandlerMapping] Mapped "{[/customers/v1/{id}/json],methods=[POST]}" onto public org.springframework.http.ResponseEntity com.rupp.spring.controller.CustomerController.updateByJson(java.lang.Long,com.rupp.spring.domain.DCustomer)
+03-02 08:40:08,127 INFO  [RequestMappingHandlerMapping] Mapped "{[/customers/v1/json],methods=[POST]}" onto public org.springframework.http.ResponseEntity com.rupp.spring.controller.CustomerController.createByJson(com.rupp.spring.domain.DCustomer)
+03-02 08:40:08,127 INFO  [RequestMappingHandlerMapping] Mapped "{[/customers/v1/{id}],methods=[GET]}" onto public org.springframework.http.ResponseEntity<com.rupp.spring.domain.DCustomer> com.rupp.spring.controller.CustomerController.getDCustomer(java.lang.Long)
+03-02 08:40:08,143 INFO  [RequestMappingHandlerMapping] Mapped "{[/customers/v1/schema],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> com.rupp.spring.controller.CustomerController.getschma(javax.servlet.http.HttpServletRequest)
+03-02 08:40:08,143 INFO  [RequestMappingHandlerMapping] Mapped "{[/customers/v1/{id}],methods=[DELETE]}" onto public org.springframework.http.ResponseEntity<java.lang.Long> com.rupp.spring.controller.CustomerController.deleteDCustomer(java.lang.Long)
+03-02 08:40:08,143 INFO  [RequestMappingHandlerMapping] Mapped "{[/customers/v1/all],methods=[GET]}" onto public java.util.List<com.rupp.spring.domain.DCustomer> com.rupp.spring.controller.CustomerController.getDCustomers()
+03-02 08:40:08,143 INFO  [RequestMappingHandlerMapping] Mapped "{[/customers/v1],methods=[POST]}" onto public org.springframework.http.ResponseEntity<com.rupp.spring.domain.DCustomer> com.rupp.spring.controller.CustomerController.createDCustomer(com.rupp.spring.domain.DCustomer)
+03-02 08:40:08,143 INFO  [RequestMappingHandlerMapping] Mapped "{[/customers/v1],methods=[GET]}" onto public com.rupp.spring.domain.ResponseList<com.rupp.spring.domain.DCustomer> com.rupp.spring.controller.CustomerController.getPage(int,java.lang.String)
+03-02 08:40:08,227 INFO  [DispatcherServlet] FrameworkServlet 'spring-dispatcher': initialization completed in 920 ms
+03-02 08:44:54,379 INFO  [AnnotationConfigWebApplicationContext] Closing WebApplicationContext for namespace 'spring-dispatcher-servlet': startup date [Thu Mar 02 08:40:07 ICT 2017]; root of context hierarchy
