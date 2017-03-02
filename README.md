@@ -504,6 +504,8 @@ password=${database.password}
   </properties>
   
 ```
+Other Reference
+
 Gitignore not working
 (http://stackoverflow.com/questions/25436312/gitignore-not-working)
 ```
