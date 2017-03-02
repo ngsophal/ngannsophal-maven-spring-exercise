@@ -28,7 +28,7 @@ import com.rupp.spring.domain.ResponseList;
 import com.rupp.spring.service.CustomerService;
 
 @Controller
-@RequestMapping("categories")
+@RequestMapping("customers")
 public class CustomerController {
     private static final Logger logger = LoggerFactory.getLogger(CustomerController.class);
 
@@ -40,7 +40,7 @@ public class CustomerController {
     @GetMapping("/v1/all")
     @ResponseBody
     public List<DCustomer> getDCustomers() {
-        logger.debug("====get all categories====");
+        logger.debug("====get all customers====");
         return service.list();
     }
     

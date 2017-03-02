@@ -103,9 +103,9 @@ public class CustomerDaoImpl implements CustomerDao {
         return page;
     }
     /**
-     * Returns list of categories from dummy database.
+     * Returns list of customers from dummy database.
      * 
-     * @return list of categories
+     * @return list of customers
      */
     public List<DCustomer> list() {
         final String sql = "select * from customers";

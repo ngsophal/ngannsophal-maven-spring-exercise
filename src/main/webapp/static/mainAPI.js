@@ -1,4 +1,4 @@
-var apiUrl = "/api/categories/";
+var apiUrl = "/api/customers/";
 var cursor = "";
 var pageSize = 10;
 var isChange = false;

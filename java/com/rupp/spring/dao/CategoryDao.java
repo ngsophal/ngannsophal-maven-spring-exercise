@@ -8,9 +8,9 @@ import com.rupp.spring.domain.ResponseList;
 public interface CustomerDao {
 
     /**
-     * Returns list of categories from dummy database.
+     * Returns list of customers from dummy database.
      * 
-     * @return list of categories
+     * @return list of customers
      */
     List<DCustomer> list();
 
